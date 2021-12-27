@@ -18,17 +18,17 @@ function Screen() {
   // }
 
   return (
-    <div className="screen-container">
-      <div className="screen-border">
-        <div className="screen"></div>
-        <div className="speaker">
-          <div className="example">
-            <div className="example2">
-            <div className="diagonal"></div>
+    <div className="screen">
+      <div className="screen__outer">
+        <div className="screen__content"></div>
+        <div className="screen__speaker">
+          <div className="screen__speaker-left">
+            <div className="screen__speaker-left-column">
+            <div className="screen__diagonal"></div>
             </div>
-            <div className="circle"></div>
+            <div className="screen__circle"></div>
           </div>
-          <div className="lines"></div>
+          <div className="screen__lines"></div>
         </div>
       </div>
     </div>
