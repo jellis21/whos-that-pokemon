@@ -1,0 +1,5 @@
+.below-screen {
+  border: 5px solid green;
+  /* flex-grow: 0; */
+  height: 30%;
+}

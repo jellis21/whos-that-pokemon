@@ -1,0 +1,65 @@
+.screen-container {
+  align-items: center;
+  border: 5px solid blue;
+  display: flex;
+  /* flex-grow: 1; */
+  height: 50%;
+  justify-content: center;
+}
+
+.screen-border {
+  align-items: center;
+  background-color: lightgray;
+  display: flex;
+  flex-direction: column;
+  height: 75%;
+  width: 75%;
+  /* justify-content: center; */
+}
+
+.screen {
+  background-color: black;
+  height: 65%;
+  margin-top: 10%;
+  width: 75%;
+}
+
+.speaker {
+  border: 1px solid blue;
+  display: flex;
+  justify-content: space-between;
+  height: 25%;
+  width: 100%;
+}
+
+.diagonal {
+  background-color: black;
+  height: 20px;
+  width: 20px; 
+}
+
+.circle { 
+  background-color: yellow;
+  height: 20px;
+  margin-top: 10%;
+  width: 20px; 
+}
+
+.lines {
+  background-color: green;
+  height: 20px;
+  margin: 5% 10% 0 0;
+  width: 20px; 
+}
+
+.example {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+}
+
+.example2 {
+  align-items: flex-end;
+  display: flex;
+  height: 100%;
+}
