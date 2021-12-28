@@ -1,3 +1,10 @@
 .landing {
   color: lightgray;
 }
+
+.landing__image {
+  border-radius: 0 0 3% 3%;
+  height: 174px;
+  object-fit: fill;
+  width: 271px;
+}
