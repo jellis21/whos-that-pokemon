@@ -17,13 +17,17 @@
 .below-screen__button {
   background-color: black;
   border-radius: 50%;
+  cursor: pointer;
   height: 50px;
   margin: 0 auto;
   width: 50px;
 }
 
-.below-screen__start-container {
+.below-screen__button:active {
+  background-color: rgb(65, 61, 61);
+}
 
+.below-screen__start-container {
   flex: 1;
 }
 
@@ -37,8 +41,13 @@
 .below-screen__start-button {
   color: white;
   background-color: blueviolet;
+  cursor: pointer;
   height: 20px;
   padding: 0 15px;
+}
+
+.below-screen__start-button:active {
+  background-color: rgba(158, 55, 255, 0.927);
 }
 
 .below-screen__green-screen-container {

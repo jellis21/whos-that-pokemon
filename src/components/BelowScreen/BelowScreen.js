@@ -10,7 +10,7 @@ function BelowScreen() {
         </div>
         <div className="below-screen__start-container">
           <div className="below-screen__start">
-            <div className="below-screen__start-button">search</div>
+            <div className="below-screen__start-button">start</div>
           </div>
           <div className="below-screen__green-screen-container">
             <div className="below-screen__green-screen"></div>
