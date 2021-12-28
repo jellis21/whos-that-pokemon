@@ -1,5 +1,85 @@
 .below-screen {
-  border: 5px solid green;
-  /* flex-grow: 0; */
+  display: flex;
   height: 30%;
+  justify-content: center;
+}
+
+.below-screen__container {
+  display: flex;
+  width: 85%;
+}
+
+.below-screen__button-container {
+  flex-grow: 0;
+  width: 25%;
+}
+
+.below-screen__button {
+  background-color: black;
+  border-radius: 50%;
+  height: 50px;
+  margin: 0 auto;
+  width: 50px;
+}
+
+.below-screen__start-container {
+
+  flex: 1;
+}
+
+.below-screen__start {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+.below-screen__start-button {
+  color: white;
+  background-color: blueviolet;
+  height: 20px;
+  padding: 0 15px;
+}
+
+.below-screen__green-screen-container {
+  height: 50%;
+  width: 80%;
+}
+
+.below-screen__green-screen {
+  background-color: darkgreen;
+  border: 3px solid black;
+  border-radius: 3%;
+  height: 33%;
+}
+
+.below-screen__dpad-container {
+  align-items: center;
+  display: flex;
+  flex: 1;
+}
+
+.below-screen__dpad {
+  height: 50%;
+  width: 100%;
+}
+
+.below-screen__dpad-buttons {
+  display: flex;
+  height: 33.3%;
+  width: 100%;
+}
+
+.dpad-buttons {
+  width: 33.3%;
+}
+
+.dpad-buttons--black {
+  background-color: black;
+  border: 1px solid darkgrey;
+  cursor: pointer;
+}
+
+.dpad-buttons--black:active {
+  background-color: rgb(65, 61, 61);
 }
