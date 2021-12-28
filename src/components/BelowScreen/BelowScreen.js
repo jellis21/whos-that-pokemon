@@ -13,7 +13,9 @@ function BelowScreen() {
             <div className="below-screen__start-button">start</div>
           </div>
           <div className="below-screen__green-screen-container">
-            <div className="below-screen__green-screen"></div>
+            <div className="below-screen__green-screen">
+              <input type="text" />
+            </div>
           </div>
         </div>
         <div className="below-screen__dpad-container">

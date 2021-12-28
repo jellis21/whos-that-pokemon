@@ -14,11 +14,11 @@ function AboveScreen() {
           <div className="above-screen__section__button"></div>
           <div className="above-screen__section__button"></div>
         </div>
-      <svg height="70" width="180">
+      <svg height="65px" width="130px">
         <line
           x1="0"
-          y1="69"
-          x2="168"
+          y1="59px"
+          x2="125px"
           y2="0"
           style={{stroke: "black", strokeWidth: 2}}
         />

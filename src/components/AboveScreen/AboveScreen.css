@@ -16,17 +16,17 @@
 .above-screen__section__light-container {
   background-color: lightgray;
   border-radius: 50%;
-  height: 125px;
-  margin: 7px auto;
+  height: 100px;
+  margin: 10px auto;
   position: relative;
-  width: 125px;
+  width: 100px;
 }
 
 .above-screen__section__light {
   background-color: rgb(106, 148, 255);
   border-radius: 50%;
-  height: 100px;
-  width: 100px;
+  height: 75px;
+  width: 75px;
   position: absolute;
   top: 12px;
   left: 12px;

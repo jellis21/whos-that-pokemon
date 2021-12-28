@@ -56,10 +56,16 @@
 }
 
 .below-screen__green-screen {
-  background-color: darkgreen;
   border: 3px solid black;
   border-radius: 3%;
   height: 33%;
+}
+
+input {
+  background-color: darkgreen;
+  color: lightgray;
+  height: 100%;
+  width: 100%;
 }
 
 .below-screen__dpad-container {
