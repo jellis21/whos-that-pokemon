@@ -8,12 +8,12 @@
   height: 6%;
 }
 
-a:link {
+.footer__link:link {
   color: lightgray;
   text-decoration: none;
 }
 
-a:hover {
+.footer__link:hover {
   color: orange;
   text-decoration: none;
 }

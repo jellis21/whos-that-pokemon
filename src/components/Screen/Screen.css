@@ -18,9 +18,20 @@
 .screen__content {
   background-color: black;
   border-radius: 3%;
+  color: lightgray;
   height: 65%;
   margin-top: 10%;
   width: 85%;
+}
+
+.screen__content__nav {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+}
+
+li {
+  color: orange;
 }
 
 .screen__speaker {
