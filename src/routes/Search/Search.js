@@ -1,27 +1,28 @@
 import React from "react";
 import { useEffect, useState } from "react";
+import { connect } from "react-redux";
 import "./Search.css";
 
-function Search() {
+function Search( {belowScreenPokemon} ) {
   const [pokemon, setPokemon] = useState(null);
   useEffect(() => {
-    fetch("https://pokeapi.co/api/v2/pokemon-species/mew/")
+    fetch(`https://pokeapi.co/api/v2/pokemon-species/${belowScreenPokemon}/`)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         setPokemon(data);
       });
-  }, []);
+  }, [belowScreenPokemon]);
 
   const [pokemon1, setPokemon1] = useState(null);
   useEffect(() => {
-    fetch("https://pokeapi.co/api/v2/pokemon/mew/")
+    fetch(`https://pokeapi.co/api/v2/pokemon/${belowScreenPokemon}/`)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         setPokemon1(data);
       });
-  }, []);
+  }, [belowScreenPokemon]);
 
   if (!pokemon || !pokemon1) {
     return null;
@@ -42,4 +43,8 @@ function Search() {
   );
 }
 
-export default Search;
+const mapStateToProps = (state) => ({
+  belowScreenPokemon: state.belowScreenReducer.pokemon
+})
+
+export default connect(mapStateToProps, null)(Search)

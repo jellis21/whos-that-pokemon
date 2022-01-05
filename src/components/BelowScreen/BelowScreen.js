@@ -1,18 +1,22 @@
 import React from "react";
 import { useState } from 'react';
 import "./BelowScreen.css";
+import { getValue } from '../../redux/actions/belowScreenActions';
+import { connect } from 'react-redux';
 
-function BelowScreen() {
+function BelowScreen( {getValue} ) { // do I import {getValue} again here?
   const [greenScreenValue, setGreenScreenValue] = useState();
 
   function onSubmit(e) {
     e.preventDefault();
-    console.log(greenScreenValue)
+    console.log(e);
+    const value = e.target[1].value;
+    getValue(value);
   }
 
   function onChange(e) {
-    let value = e.target.value
-    setGreenScreenValue(value)
+    // const value = e.target.value
+    // getValue(value)
   }
 
   return (
@@ -55,4 +59,10 @@ function BelowScreen() {
   );
 }
 
-export default BelowScreen;
+const mapStateToProps = (state) => ({
+  selectedPokemon: state.belowScreenReducer.pokemon
+})
+
+const mapDispatchToProps = { getValue }
+
+export default connect(mapStateToProps, mapDispatchToProps)(BelowScreen);
