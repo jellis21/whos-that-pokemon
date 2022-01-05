@@ -9,7 +9,6 @@ function BelowScreen( {getValue} ) { // do I import {getValue} again here?
 
   function onSubmit(e) {
     e.preventDefault();
-    console.log(e);
     const value = e.target[1].value;
     getValue(value);
   }
