@@ -1,8 +1,10 @@
 import { FETCH_POKEMON } from "./types";
 
-export const searchResults = (value) => dispatch => {
+export const searchResult = (name) => (dispatch) => {
   dispatch({
     type: FETCH_POKEMON,
-    payload: value
-  })
-}
+    payload: {
+      name
+    },
+  });
+};

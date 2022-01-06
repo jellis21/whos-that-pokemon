@@ -1,18 +1,19 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { connect } from "react-redux";
+import { searchResult, } from "../../redux/actions/searchActions";
 import "./Search.css";
 
-function Search({ belowScreenPokemon }) {
+function Search({ belowScreenPokemon, searchResult }) {
   const [pokemon, setPokemon] = useState(null);
   useEffect(() => {
     if (belowScreenPokemon !== "") {
       fetch(`https://pokeapi.co/api/v2/pokemon-species/${belowScreenPokemon}/`)
         .then((res) => res.json())
         .then((data) => {
-          // console.log(data);
           setPokemon(data);
         });
+        
     }
   }, [belowScreenPokemon]);
 
@@ -22,11 +23,11 @@ function Search({ belowScreenPokemon }) {
       fetch(`https://pokeapi.co/api/v2/pokemon/${belowScreenPokemon}/`)
         .then((res) => res.json())
         .then((data) => {
-          // console.log(data);
           setPokemon1(data);
+          searchResult(data.sprites.front_default)
         });
     }
-  }, [belowScreenPokemon]);
+  }, [belowScreenPokemon, searchResult]);
 
   if (!pokemon || !pokemon1) {
     return null;
@@ -35,7 +36,7 @@ function Search({ belowScreenPokemon }) {
     <div className="search">
       <div className="search__content">
         <div className="a">
-          <h3>{pokemon.name}</h3>
+          <h3 id="pokemon-name">{pokemon.name}</h3>
           <p>No. {pokemon.id}</p>
         </div>
         <div className="b">
@@ -51,4 +52,6 @@ const mapStateToProps = (state) => ({
   belowScreenPokemon: state.belowScreenReducer.pokemon,
 });
 
-export default connect(mapStateToProps, null)(Search);
+const mapDispatchToProps = { searchResult };
+
+export default connect(mapStateToProps, mapDispatchToProps)(Search);

@@ -1,11 +1,9 @@
 import React from "react";
-import { useState } from 'react';
 import "./BelowScreen.css";
-import { getValue } from '../../redux/actions/belowScreenActions';
+import { getValue, sendToTeam } from '../../redux/actions/belowScreenActions';
 import { connect } from 'react-redux';
 
-function BelowScreen( {getValue} ) { // do I import {getValue} again here?
-  const [greenScreenValue, setGreenScreenValue] = useState();
+function BelowScreen( { getValue, sendToTeam } ) { 
 
   function onSubmit(e) {
     e.preventDefault();
@@ -13,16 +11,15 @@ function BelowScreen( {getValue} ) { // do I import {getValue} again here?
     getValue(value);
   }
 
-  function onChange(e) {
-    // const value = e.target.value
-    // getValue(value)
+  function addToTeam() {
+    sendToTeam(document.getElementById("pokemon-name").innerText)
   }
 
   return (
     <div className="below-screen">
       <div className="below-screen__container">
         <div className="below-screen__button-container">
-          <div className="below-screen__button"></div>
+          <div className="below-screen__button" onClick={addToTeam}></div>
         </div>
         <form className="below-screen__start-container" onSubmit={onSubmit}>
           <div className="below-screen__start">
@@ -30,7 +27,7 @@ function BelowScreen( {getValue} ) { // do I import {getValue} again here?
           </div>
           <div className="below-screen__green-screen-container">
             <div className="below-screen__green-screen">
-              <input onChange={onChange} type="text" />
+              <input id="search-field" type="text" />
             </div>
           </div>
         </form>
@@ -59,9 +56,10 @@ function BelowScreen( {getValue} ) { // do I import {getValue} again here?
 }
 
 const mapStateToProps = (state) => ({
-  selectedPokemon: state.belowScreenReducer.pokemon
+  selectedPokemon: state.belowScreenReducer.pokemon,
+  teammate: state.belowScreenReducer.team
 })
 
-const mapDispatchToProps = { getValue }
+const mapDispatchToProps = { getValue, sendToTeam }
 
 export default connect(mapStateToProps, mapDispatchToProps)(BelowScreen);
