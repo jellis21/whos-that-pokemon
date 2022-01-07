@@ -24,7 +24,6 @@ function Search({ belowScreenPokemon, searchResult }) {
         .then((res) => res.json())
         .then((data) => {
           setPokemon1(data);
-          searchResult(data.sprites.front_default)
         });
     }
   }, [belowScreenPokemon, searchResult]);
@@ -40,7 +39,7 @@ function Search({ belowScreenPokemon, searchResult }) {
           <p>No. {pokemon.id}</p>
         </div>
         <div className="b">
-          <img src={pokemon1.sprites.front_default} alt={pokemon.name} />
+          <img id="pokedex-image" src={pokemon1.sprites.other["official-artwork"].front_default} alt={pokemon.name} />
           <p>{pokemon.flavor_text_entries[0].flavor_text}</p>
         </div>
       </div>

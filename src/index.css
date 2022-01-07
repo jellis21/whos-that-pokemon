@@ -12,3 +12,8 @@ html, body {
 body {
   background-color: lightgray;
 }
+
+#root {
+  display: flex;
+  justify-content: center;
+}

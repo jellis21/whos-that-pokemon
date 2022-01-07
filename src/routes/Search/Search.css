@@ -16,3 +16,8 @@
   justify-content: space-around;
   margin-top: 10px;
 }
+
+#pokedex-image {
+  height: 100px;
+  width: 100px;
+}

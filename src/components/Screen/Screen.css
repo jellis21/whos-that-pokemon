@@ -30,9 +30,9 @@
   list-style-type: none;
 }
 
-li {
+/* li {
   color: orange;
-}
+} */
 
 .screen__speaker {
   display: flex;

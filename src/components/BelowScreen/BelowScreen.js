@@ -57,7 +57,7 @@ function BelowScreen( { getValue, sendToTeam } ) {
 
 const mapStateToProps = (state) => ({
   selectedPokemon: state.belowScreenReducer.pokemon,
-  teammate: state.belowScreenReducer.team
+  teammate: state.belowScreenReducer.team,
 })
 
 const mapDispatchToProps = { getValue, sendToTeam }

@@ -1,3 +1,17 @@
 .team {
   color: lightgray;
 }
+
+.team__ol__li {
+  margin-bottom: 2%;
+  margin-left: 10%;
+}
+
+.team__ol__li:first-of-type {
+  margin-top: 5%;
+}
+
+.team__remove-button {
+  background-color: orange;
+  margin-left: 10%;
+}
