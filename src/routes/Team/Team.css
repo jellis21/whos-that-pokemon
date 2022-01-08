@@ -13,5 +13,6 @@
 
 .team__remove-button {
   background-color: orange;
+  cursor: pointer;
   margin-left: 10%;
 }

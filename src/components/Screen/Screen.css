@@ -30,10 +30,6 @@
   list-style-type: none;
 }
 
-/* li {
-  color: orange;
-} */
-
 .screen__speaker {
   display: flex;
   justify-content: space-between;

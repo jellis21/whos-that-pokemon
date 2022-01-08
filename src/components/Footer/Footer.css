@@ -8,7 +8,8 @@
   height: 6%;
 }
 
-.footer__link:link {
+.footer__link:link,
+.footer__link:visited {
   color: lightgray;
   text-decoration: none;
 }

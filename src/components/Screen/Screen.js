@@ -4,6 +4,7 @@ import Landing from "../../routes/Landing/Landing";
 import Search from "../../routes/Search/Search";
 import Team from "../../routes/Team/Team";
 import "./Screen.css";
+import { useState } from "react";
 
 function Screen() {
   return (
@@ -12,26 +13,38 @@ function Screen() {
         <div className="screen__content">
           <nav>
             <ul className="screen__content__nav">
-              <li>
+              <li className="screen__content__nav__li">
                 <NavLink
                   to="/"
-                  style={{ color: "orange", textDecoration: "none" }}
+                  style={({ isActive }) =>
+                    isActive
+                      ? { backgroundColor: "orange", color: "black", textDecoration: "none" }
+                      : { color: "orange", textDecoration: "none" }
+                  }
                 >
                   Home
                 </NavLink>
               </li>
-              <li>
+              <li className="screen__content__nav__li">
                 <NavLink
                   to="search"
-                  style={{ color: "orange", textDecoration: "none" }}
+                  style={({ isActive }) =>
+                    isActive
+                      ? { backgroundColor: "orange", color: "black", textDecoration: "none" }
+                      : { color: "orange", textDecoration: "none" }
+                  }
                 >
                   Search
                 </NavLink>
               </li>
-              <li>
+              <li className="screen__content__nav__li">
                 <NavLink
                   to="team"
-                  style={{ color: "orange", textDecoration: "none" }}
+                  style={({ isActive }) =>
+                    isActive
+                      ? { backgroundColor: "orange", color: "black", textDecoration: "none" }
+                      : { color: "orange", textDecoration: "none" }
+                  }
                 >
                   Team
                 </NavLink>

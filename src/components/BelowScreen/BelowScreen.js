@@ -3,7 +3,7 @@ import "./BelowScreen.css";
 import { getValue, sendToTeam } from '../../redux/actions/belowScreenActions';
 import { connect } from 'react-redux';
 
-function BelowScreen( { getValue, sendToTeam } ) { 
+function BelowScreen( { getValue, sendToTeam, teammates } ) { 
 
   function onSubmit(e) {
     e.preventDefault();
@@ -12,7 +12,11 @@ function BelowScreen( { getValue, sendToTeam } ) {
   }
 
   function addToTeam() {
-    sendToTeam(document.getElementById("pokemon-name").innerText)
+    if (teammates.length >= 6) {
+      alert('You can only have six pokemon on your team!');
+    } else {
+      sendToTeam(document.getElementById("pokemon-name").innerText)
+    }
   }
 
   return (
@@ -57,7 +61,7 @@ function BelowScreen( { getValue, sendToTeam } ) {
 
 const mapStateToProps = (state) => ({
   selectedPokemon: state.belowScreenReducer.pokemon,
-  teammate: state.belowScreenReducer.team,
+  teammates: state.belowScreenReducer.team,
 })
 
 const mapDispatchToProps = { getValue, sendToTeam }
