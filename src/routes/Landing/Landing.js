@@ -1,5 +1,5 @@
 import React from 'react';
-import pokemonImage from "../../images/who-pokemon.jpg";
+import pokemonImage from "../../images/pokeball.gif";
 import './Landing.css';
 
 function Landing() {

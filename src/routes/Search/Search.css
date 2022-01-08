@@ -6,12 +6,12 @@
   margin: 10px;
 }
 
-.a {
+.search__content__name {
   display: flex;
   justify-content: space-around;
 }
 
-.b {
+.search__content__pokemon {
   display: flex;
   justify-content: space-around;
   margin-top: 10px;

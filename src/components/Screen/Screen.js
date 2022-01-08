@@ -4,7 +4,6 @@ import Landing from "../../routes/Landing/Landing";
 import Search from "../../routes/Search/Search";
 import Team from "../../routes/Team/Team";
 import "./Screen.css";
-import { useState } from "react";
 
 function Screen() {
   return (

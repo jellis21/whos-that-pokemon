@@ -23,15 +23,15 @@ function BelowScreen( { getValue, sendToTeam, teammates } ) {
     <div className="below-screen">
       <div className="below-screen__container">
         <div className="below-screen__button-container">
-          <div className="below-screen__button" onClick={addToTeam}></div>
+          <div className="below-screen__button" onClick={addToTeam} title="Add pokemon to team"></div>
         </div>
         <form className="below-screen__start-container" onSubmit={onSubmit}>
           <div className="below-screen__start">
-            <button type="submit" className="below-screen__start-button">start</button>
+            <button type="submit" className="below-screen__start-button" title="Search for pokemon you entered below">start</button>
           </div>
           <div className="below-screen__green-screen-container">
             <div className="below-screen__green-screen">
-              <input id="search-field" type="text" />
+              <input id="search-field" type="text" title="Enter your pokemon"/>
             </div>
           </div>
         </form>

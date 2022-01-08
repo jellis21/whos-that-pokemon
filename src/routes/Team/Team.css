@@ -2,12 +2,17 @@
   color: lightgray;
 }
 
-.team__ol__li {
-  margin-bottom: 2%;
-  margin-left: 10%;
+.team__list {
+  list-style-type: none;
 }
 
-.team__ol__li:first-of-type {
+.team__ul__li {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 5% 2% 5%;
+}
+
+.team__ul__li:first-of-type {
   margin-top: 5%;
 }
 

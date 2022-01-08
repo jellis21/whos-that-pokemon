@@ -11,7 +11,8 @@ function Search({ belowScreenPokemon }) {
         .then((res) => res.json())
         .then((data) => {
           setPokemon(data);
-        });
+        })
+        .catch((error) => {alert('Not a pokemon. Please try again!')})
     }
   }, [belowScreenPokemon]);
 
@@ -32,11 +33,11 @@ function Search({ belowScreenPokemon }) {
   return (
     <div className="search">
         <div className="search__content">
-          <div className="a">
+          <div className="search__content__name">
             <h3 id="pokemon-name">{pokemon.name}</h3>
             <p>No. {pokemon.id}</p>
           </div>
-          <div className="b">
+          <div className="search__content__pokemon">
             <img
               id="pokedex-image"
               src={pokemon1.sprites.other["official-artwork"].front_default}

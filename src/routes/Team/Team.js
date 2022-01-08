@@ -12,7 +12,7 @@ function Team({ teammates, deleteFromTeam }) {
       teammates &&
       teammates.map((teammate) => {
         return (
-          <li className="team__ol__li" key={index++}>
+          <li className="team__ul__li" key={index++}>
             {teammate}
             <button onClick={() => deleteFromTeam(teammate)} className="team__remove-button">remove</button>
           </li>
@@ -23,7 +23,7 @@ function Team({ teammates, deleteFromTeam }) {
 
   return (
     <div className="team">
-      <ol>{team}</ol>
+      <ul className="team__list">{team}</ul>
     </div>
   );
 }
