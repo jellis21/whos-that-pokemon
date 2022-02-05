@@ -17,10 +17,18 @@
 .below-screen__button {
   background-color: black;
   border-radius: 50%;
+  color: #fff;
   cursor: pointer;
   height: 50px;
   margin: 0 auto;
+  position: relative;
   width: 50px;
+}
+
+#below-screen__button__text {
+  position: absolute;
+  top: 17px;
+  left: 19px;
 }
 
 .below-screen__button:active {
@@ -57,7 +65,6 @@
 
 .below-screen__green-screen {
   border: 3px solid black;
-  border-radius: 3%;
   height: 33%;
 }
 

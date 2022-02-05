@@ -7,7 +7,7 @@ function BelowScreen( { getValue, sendToTeam, teammates } ) {
 
   function onSubmit(e) {
     e.preventDefault();
-    const value = e.target[1].value;
+    const value = e.target[1].value.toLowerCase();
     getValue(value);
   }
 
@@ -23,7 +23,9 @@ function BelowScreen( { getValue, sendToTeam, teammates } ) {
     <div className="below-screen">
       <div className="below-screen__container">
         <div className="below-screen__button-container">
-          <div className="below-screen__button" onClick={addToTeam} title="Add pokemon to team"></div>
+          <div className="below-screen__button" onClick={addToTeam} title="Add pokemon to team">
+            <p id="below-screen__button__text">A</p>
+          </div>
         </div>
         <form className="below-screen__start-container" onSubmit={onSubmit}>
           <div className="below-screen__start">
